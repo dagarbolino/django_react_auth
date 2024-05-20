@@ -42,7 +42,7 @@ export const AuthProvider = ({ children }) => {
             localStorage.setItem("authTokens", JSON.stringify(data));
             navigate("/")
             swal.fire({
-                title: "Login Success",
+                title: "Successful connection",
                 icon: "success",
                 toast: true,
                 timer: 6000,
@@ -52,7 +52,7 @@ export const AuthProvider = ({ children }) => {
             })
         } else {
             console.log(response.status)
-            console.log("An Error Occured")
+            console.log("An error has occurred")
             swal.fire({
                 title: "Email - Password does not exist",
                 icon: "error",
@@ -76,10 +76,10 @@ export const AuthProvider = ({ children }) => {
         })
         const data = await response.json()
 
-        if (response.status == 201){
+        if (response.status === 201){
             navigate('/login')
             swal.fire({
-                title: "Registration Success",
+                title: "Registration success",
                 icon: "success",
                 toast: true,
                 timer: 6000,
@@ -89,7 +89,7 @@ export const AuthProvider = ({ children }) => {
             })
         } else {
             console.log(response.status)
-            console.log("An Error Occured")
+            console.log("Une erreur s'est produite")
             console.log(data)
             swal.fire({
                 title: "There was a server error",
@@ -109,7 +109,7 @@ export const AuthProvider = ({ children }) => {
         localStorage.removeItem("authTokens")
         navigate('/login')
         swal.fire({
-            title: "You have been logged out",
+            title: "You have been disconnected",
             icon: "success",
             toast: true,
             timer: 6000,

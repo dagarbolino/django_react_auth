@@ -23,7 +23,7 @@ class RegisterView(generics.CreateAPIView):
 @api_view(['GET']) 
 @permission_classes([IsAuthenticated])
 def ProtectedView(request):
-    output = f"Welcom {request.user.username}, you are authenticated!"
+    output = f"{request.user.username}, you are authenticated !"
     return Response({'response': output}, status=status.HTTP_200_OK)
 
 

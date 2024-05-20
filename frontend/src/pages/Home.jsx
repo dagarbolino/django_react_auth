@@ -3,7 +3,6 @@ import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import AuthContext from "../context/AuthContext"
 
-
 const Home = () => {
   const { user, logoutUser } = useContext(AuthContext)
   const token = localStorage.getItem("authTokens")
@@ -15,64 +14,73 @@ const Home = () => {
   }
 
   return (
-
-    <div class='w-full
-    flex flex-col justify-start items-start 
-    '>
-      <h1 class='text-2xl font-semibold
-      flex flex-row justify-center items-center
-      w-full h-10
-      '>Home Page</h1>
-      <p class='text-lg font-semibold
-      flex flex-row justify-center items-center
-      w-full h-10 mb-10
-      '>This is the Homepage</p>
-
-      {user ?
-        <>
-          <span className='text-4xl w-full h-auto mb-8
+    <div className="lg:h-screen w-auto flex py-4
+    flex-row justify-center items-center h-screen 
+  bg-sky-200">
+    <div className="border-2 w-56 sm:w-72 md:w-96 lg:w-96 h-auto
+    flex flex-col justify-start items-center
+    rounded-2xl border-sky-800 bg-white shadow-2xl p-4 mt-6">
+        <div class='w-full
+        flex flex-col justify-start items-start 
+        '>
+          <h1 class='text-xl sm:text-2xl md:text-3xl  font-semibold
           flex flex-row justify-center items-center
-          '>
-            You are logged in
-          </span>
-          <br />
-          <br />
-          <div className="w-full flex flex-row">
-            <div className="flex flex-col w-full">
+          w-full h-10
+          '>Great !</h1>
+          <p class='text-xl sm:text-2xl md:text-3xl  font-semibold
+          flex flex-row justify-center items-center
+          w-full h-10 mb-10
+          '>You are the best !!</p>
+
+          {user ?
+            <>
+              <span className='text-lg sm:text-xl md:text-2xl w-full h-auto mb-8
+              flex flex-row justify-center items-center text-emerald-600 font-semibold
+              '>
+                You are logged in
+              </span>
+              <br />
+              <br />
               <Link
-                className='text-blue-800'
+                className='w-full bg-blue-800 text-white mb-2 p-2 rounded-md
+                              flex flex-row justify-center items-center
+                              hover:bg-blue-600 transition duration-200 ease-in-out'
                 to="/dashboard">Dashboard</Link>
               <br />
               <Link
-                className='text-blue-800'
+                className='w-full bg-blue-800 text-white mb-2 p-2 rounded-md
+                              flex flex-row justify-center items-center
+                              hover:bg-blue-600 transition duration-200 ease-in-out'
                 onClick={logoutUser}>Logout</Link>
-            </div>
-            <div className="flex flex-col w-full">
+
               <Link
-                className='text-blue-800 border-2 border-blue-800 p-2 rounded-lg hover:bg-blue-800 hover:text-white transition duration-500 ease-in-out
-                flex justify-center items-center'
-                to="/">App</Link>
-
-            </div>
-
-          </div>
-        </>
-        :
-        <>
-          <span className='text-4xl mb-6'>
-            You are not logged in
-          </span>
-          <br />
-          <br />
-          <Link
-            className='text-blue-800 '
-            to="/login">Login</Link>
-          <br />
-          <Link
-            className='text-blue-800 '
-            to="/register">Register</Link>
-        </>
-      }
+                className='w-full bg-blue-800 text-white mb-2 p-2 rounded-md
+                            flex flex-row justify-center items-center
+                            hover:bg-blue-600 transition duration-200 ease-in-out'
+                to="/info">Info</Link>
+            </>
+            :
+            <>
+              <span className='text-4xl mb-16'>
+                You are not logged in
+              </span>
+              <br />
+              <br />
+              <Link
+                className='w-full bg-blue-800 text-white mb-2 p-2 rounded-md
+                              flex flex-row justify-center items-center
+                              hover:bg-blue-600 transition duration-200 ease-in-out'
+                to="/login">Login</Link>
+              <br />
+              <Link
+                className='w-full bg-blue-800 text-white mb-2 p-2 rounded-md
+                              flex flex-row justify-center items-center
+                              hover:bg-blue-600 transition duration-200 ease-in-out'
+                to="/register">Register</Link>
+            </>
+          }
+        </div>
+      </div>
     </div>
   )
 }
