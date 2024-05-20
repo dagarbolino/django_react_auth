@@ -13,7 +13,7 @@ const Dashboard = () => {
     ">
         <NavBar />
         <div className="flex flex-col justify-center items-center m-6 ">
-          <h1 className='text-3xl '>Title</h1>
+          <h1 className='text-3xl '>Management Traditional Department </h1>
         </div>
       </div>
     </>
