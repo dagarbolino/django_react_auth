@@ -18,7 +18,7 @@ const Login = () => {
     <div className="lg:h-screen w-auto flex py-4
     flex-row justify-center items-center
   bg-sky-200">
-    <div className="border-2 w-56 sm:w-72 md:w-96 lg:w-96 h-auto
+      <div className="border-2 w-56 sm:w-72 md:w-96 lg:w-96 h-auto
     flex flex-col justify-start items-center
     rounded-2xl border-sky-800 bg-white shadow-2xl p-4 mt-6">
         <div className='w-full h-auto  

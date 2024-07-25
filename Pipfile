@@ -11,6 +11,7 @@ djangorestframework-simplejwt = "*"
 python-decouple = "*"
 django-environ = "*"
 environs = "*"
+python-slugify = "*"
 
 [dev-packages]
 

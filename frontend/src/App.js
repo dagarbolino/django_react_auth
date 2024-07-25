@@ -1,14 +1,16 @@
-import React from 'react'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import ProtectedRoute from "./utils/ProtectedRoute"
-import { AuthProvider } from './context/AuthContext'
-import {Dashboard, Home, Login, Register, Info} from "./pages"
+import React from 'react';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import NavBar from './components/NavBar';
+import { AuthProvider } from './context/AuthContext';
 import './index.css';
+import { Dashboard, Home, Info, Login, Register } from "./pages";
+import ProtectedRoute from "./utils/ProtectedRoute";
 
 function App() {
   return (
     <Router>
       <AuthProvider>
+        <NavBar />
         <Routes>
           <Route
             path="/dashboard"
@@ -24,7 +26,7 @@ function App() {
         </Routes>
       </AuthProvider>
     </Router>
-  )
+  );
 }
 
-export default App
+export default App;

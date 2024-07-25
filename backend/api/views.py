@@ -20,7 +20,7 @@ class RegisterView(generics.CreateAPIView):
     serializer_class = RegisterSerializer    
 
 
-@api_view(['GET']) 
+@api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def ProtectedView(request):
     output = f"{request.user.username}, you are authenticated !"

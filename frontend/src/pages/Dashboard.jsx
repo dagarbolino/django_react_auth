@@ -1,17 +1,15 @@
 import React from 'react'
 
-import NavBar from '../components/NavBar'
 
 const Dashboard = () => {
 
 
   return (
     <>
-      <div className="max-w-6xl w-auto h-screen box-border m-0 p-0
-      flex flex-col justify-start items-center
-    bg-sky-200
-    ">
-        <NavBar />
+      <div className="lg:h-screen max-w-[1024px] flex py-4
+    flex-row justify-center items-center h-screen 
+  bg-sky-200">
+
         <div className="flex flex-col justify-center items-center m-6 ">
           <h1 className='text-3xl '>Title</h1>
         </div>
