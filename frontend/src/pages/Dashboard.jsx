@@ -6,7 +6,7 @@ const Dashboard = () => {
 
   return (
     <>
-      <div className="lg:h-screen max-w-[1024px] flex py-4
+      <div className="lg:h-screen w-full flex py-4
     flex-row justify-center items-center h-screen 
   bg-sky-200">
 

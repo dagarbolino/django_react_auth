@@ -35,7 +35,7 @@ const Info = () => {
   return (
     <>
       <div className="md:h-screen w-auto flex py-4
-      flex-row justify-center items-center bg-gradient-to-r from-blue-500 to-green-500">
+      flex-row justify-center items-center ">
         <div className="border-2 w-96 h-auto flex flex-col justify-start items-center rounded-2xl border-sky-800 bg-white shadow-2xl p-4">
 
           <div className='w-full flex flex-col justify-start items-start '>

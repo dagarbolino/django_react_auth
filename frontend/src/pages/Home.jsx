@@ -14,7 +14,7 @@ const Home = () => {
   }
 
   return (
-    <div className="lg:h-screen max-w-[1024px] flex py-4
+    <div className="lg:h-screen w-full flex py-4
     flex-row justify-center items-center h-screen 
   bg-sky-200">
     <div className="border-2 w-56 sm:w-72 md:w-96 lg:w-96 h-auto
