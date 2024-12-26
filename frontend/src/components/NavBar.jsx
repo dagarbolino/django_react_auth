@@ -29,8 +29,8 @@ function NavBar() {
           <NavLink to='/' className='bg-blue-500 text-white p-2 rounded-md m-2 w-auto hover:bg-blue-600 transition-colors duration-300 ease-in-out'>
             Home
           </NavLink>
-          <NavLink to='/dashboard' className='bg-blue-500 text-white p-2 rounded-md m-2 w-auto hover:bg-blue-600 transition-colors duration-300 ease-in-out'>
-            Dashboard
+          <NavLink to='/acceuil' className='bg-blue-500 text-white p-2 rounded-md m-2 w-auto hover:bg-blue-600 transition-colors duration-300 ease-in-out'>
+          Acceuil
           </NavLink>
           {user ? (
             <Link className='bg-red-500 text-white p-2 rounded-md mx-2 w-auto hover:bg-red-600 transition-colors duration-300 ease-in-out' onClick={handleLogout}>

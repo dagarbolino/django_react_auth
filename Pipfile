@@ -8,12 +8,14 @@ django = "*"
 djangorestframework = "*"
 django-cors-headers = "*"
 djangorestframework-simplejwt = "*"
-python-decouple = "*"
-django-environ = "*"
 environs = "*"
 python-slugify = "*"
+python-decouple = "*"
+pymysql = "*"
+dj-database-url = "*"
+django-environ = "*"
 
 [dev-packages]
 
 [requires]
-python_version = "3.11"
+python_version = "3.12"

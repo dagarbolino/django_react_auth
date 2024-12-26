@@ -3,7 +3,7 @@ import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import { AuthProvider } from './context/AuthContext';
 import './index.css';
-import { Dashboard, Home, Info, Login, Register } from "./pages";
+import { Acceuil, Dashboard, Info, Login, Register } from "./pages";
 import ProtectedRoute from "./utils/ProtectedRoute";
 
 function App() {
@@ -13,15 +13,15 @@ function App() {
         <NavBar />
         <Routes>
           <Route
-            path="/dashboard"
+            path="/acceuil"
             element={
               <ProtectedRoute>
-                <Dashboard />
+                <Acceuil />
               </ProtectedRoute>
             } />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/" exact element={<Home />} />
+          <Route path="/" exact element={<Dashboard />} />
           <Route path="/info" element={<Info />} />
         </Routes>
       </AuthProvider>
